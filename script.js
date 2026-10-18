@@ -206,8 +206,10 @@ const translations = {
     "p2.sub": "Forum REST API · in progress",
     "p2.li1": "API with users, posts and comments, organized in layers (controller, service, repository) and DTOs.",
     "p2.li2": "User registration with Spring Security and persistence with Spring Data JPA.",
-    "p3.sub": "Handmade Products Catalog",
-    "p3.li1": "Digital catalog to create, edit and view products, promoting the work of local artisans.",
+    "p3.title": "Personal Portfolio",
+    "p3.sub": "Personal Website",
+    "p3.li1": "Responsive personal website with about, projects, experience and contact sections.",
+    "p3.li2": "Light/dark theme and PT/EN language that remember the visitor's choice, scroll animations and deployment on Vercel.",
     "p4.sub": "Business Website",
     "p4.li1": "Responsive website for an artisan coffee shop with brand presentation, full menu and location.",
 
