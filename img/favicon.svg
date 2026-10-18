@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="tf" gradientUnits="userSpaceOnUse" x1="9" y1="15" x2="55" y2="49">
+      <stop offset="0" stop-color="#ffb347"/>
+      <stop offset="1" stop-color="#f89820"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0d1117"/>
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="#2a313c" stroke-width="2"/>
+  <g fill="url(#tf)">
+    <!-- T -->
+    <rect x="9" y="15" width="23" height="8" rx="2"/>
+    <rect x="16.5" y="15" width="8" height="34" rx="2"/>
+    <!-- F -->
+    <rect x="36" y="15" width="8" height="34" rx="2"/>
+    <rect x="36" y="15" width="19" height="8" rx="2"/>
+    <rect x="36" y="29" width="15" height="7" rx="2"/>
+  </g>
+</svg>

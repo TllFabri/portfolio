@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="intro-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thiago Fabri | Desenvolvedor Backend Java</title>
+  <meta name="description" content="Portfólio de Thiago Fabri, estudante de ADS e desenvolvedor backend Java/Spring Boot em Juiz de Fora-MG.">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#inicio" class="logo">&lt;tfabri<span>.dev</span>/&gt;</a>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#sobre" class="nav__link" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="#projetos" class="nav__link" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="#experiencia" class="nav__link" data-i18n="nav.experience">Experiência</a></li>
+        <li><a href="#competencias" class="nav__link" data-i18n="nav.skills">Competências</a></li>
+        <li><a href="#formacao" class="nav__link" data-i18n="nav.education">Formação</a></li>
+        <li><a href="#contato" class="nav__link" data-i18n="nav.contact">Contato</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="lang-btn" id="langToggle" aria-label="Switch to English">
+          <span data-lang="pt">PT</span><span data-lang="en">EN</span>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Alternar tema claro/escuro">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="inicio">
+      <div class="hero__text">
+        <p class="hero__tag mono" data-i18n="hero.tag">Olá, mundo! Eu sou</p>
+        <h1 class="hero__title">Thiago Fabri</h1>
+        <h2 class="hero__subtitle">
+          <span class="mono typed" id="typed"></span><span class="cursor">|</span>
+        </h2>
+        <p class="hero__desc" data-i18n="hero.desc">
+          Estudante de Análise e Desenvolvimento de Sistemas com foco em <strong>backend com Java e Spring Boot</strong>.
+          Construo APIs REST com banco relacional e gosto de transformar dados em soluções úteis.
+        </p>
+        <div class="hero__buttons">
+          <a href="#projetos" class="btn btn--primary" data-i18n="hero.btnProjects">Ver projetos</a>
+          <a href="#contato" class="btn btn--outline" data-i18n="hero.btnContact">Fale comigo</a>
+          <a href="Curriculo_ThiagoFabri.pdf" download class="btn btn--outline" data-i18n="hero.btnCv">📄 Baixar currículo</a>
+        </div>
+        <p class="hero__location" data-i18n="hero.location">📍 Juiz de Fora, MG · disponível para estágio presencial ou remoto</p>
+      </div>
+
+      <div class="hero__code" aria-hidden="true">
+        <div class="code-window">
+          <div class="code-window__bar">
+            <span></span><span></span><span></span>
+            <p class="mono">Desenvolvedor.java</p>
+          </div>
+<pre class="mono"><code><span class="k">@RestController</span>
+<span class="k">public class</span> <span class="t">Desenvolvedor</span> {
+
+  <span class="k">private</span> <span class="t">String</span> nome = <span class="s">"Thiago Fabri"</span>;
+  <span class="k">private</span> <span class="t">String</span> foco = <span class="s">"Backend Java"</span>;
+  <span class="k">private</span> <span class="t">List</span>&lt;<span class="t">String</span>&gt; stack = <span class="t">List</span>.of(
+    <span class="s">"Spring Boot"</span>, <span class="s">"JPA"</span>,
+    <span class="s">"PostgreSQL"</span>, <span class="s">"Git"</span>
+  );
+
+  <span class="k">@GetMapping</span>(<span class="s">"/objetivo"</span>)
+  <span class="k">public</span> <span class="t">String</span> objetivo() {
+    <span class="k">return</span> <span class="s">"Estágio backend 🚀"</span>;
+  }
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Sobre ===== -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <h2 class="section__title reveal"><span class="mono">01.</span> <b data-i18n="about.title">Sobre mim</b></h2>
+        <div class="about reveal">
+          <div class="about__text">
+            <p data-i18n="about.p1">
+              Sou estudante do <strong>4º semestre de ADS na Universidade Estácio de Sá</strong> e venho me
+              especializando em desenvolvimento backend. Hoje desenvolvo APIs REST organizadas em camadas,
+              com persistência em banco relacional, e construí um sistema de análise de risco de crédito a partir
+              de dados públicos da Receita Federal.
+            </p>
+            <p data-i18n="about.p2">
+              Trabalho atualmente no setor de crédito, o que me deu uma boa noção de como o negócio funciona
+              e de como a comunicação clara faz diferença na resolução de problemas.
+            </p>
+            <p data-i18n="about.p3">
+              Estou em busca de um <strong>estágio em backend</strong>, presencial em Juiz de Fora ou remoto,
+              para continuar aprendendo e contribuir com um time de verdade.
+            </p>
+          </div>
+          <ul class="about__stats">
+            <li><strong>4º</strong><span data-i18n="about.stat1">semestre de ADS</span></li>
+            <li><strong>4+</strong><span data-i18n="about.stat2">projetos publicados</span></li>
+            <li><strong>5</strong><span data-i18n="about.stat3">linguagens estudadas</span></li>
+            <li><strong>2027</strong><span data-i18n="about.stat4">conclusão prevista</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projetos ===== -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <h2 class="section__title reveal"><span class="mono">02.</span> <b data-i18n="projects.title">Projetos</b></h2>
+
+        <div class="filters reveal">
+          <button class="filter active" data-filter="todos" data-i18n="projects.all">Todos</button>
+          <button class="filter" data-filter="backend">Backend</button>
+          <button class="filter" data-filter="frontend">Frontend</button>
+        </div>
+
+        <div class="projects">
+          <article class="card reveal" data-category="backend">
+            <div class="card__head">
+              <span class="card__icon">📊</span>
+              <a href="https://github.com/TllFabri/Projeto-Receita-Federal" target="_blank" rel="noopener" class="card__link">GitHub ↗</a>
+            </div>
+            <h3 data-i18n="p1.title">Análise de Risco de Crédito</h3>
+            <p class="card__sub" data-i18n="p1.sub">Consulta CNPJ</p>
+            <ul class="card__list">
+              <li data-i18n="p1.li1">Consulta de empresas por CNPJ, visualização do Quadro de Sócios e Administradores (QSA) e identificação de vínculos societários.</li>
+              <li data-i18n="p1.li2">Processamento dos dados públicos da Receita Federal com Python e persistência em PostgreSQL, consumidos por uma interface web.</li>
+              <li data-i18n="p1.li3">Documentado com escopo, requisitos funcionais e tarefas no Trello.</li>
+            </ul>
+            <ul class="tags">
+              <li>Python</li><li>PostgreSQL</li><li>JavaScript</li>
+            </ul>
+          </article>
+
+          <article class="card reveal" data-category="backend">
+            <div class="card__head">
+              <span class="card__icon">💬</span>
+              <a href="https://github.com/TllFabri/forum-api" target="_blank" rel="noopener" class="card__link">GitHub ↗</a>
+            </div>
+            <h3>Forum API</h3>
+            <p class="card__sub" data-i18n="p2.sub">API REST de Fórum · em desenvolvimento</p>
+            <ul class="card__list">
+              <li data-i18n="p2.li1">API com usuários, posts e comentários, organizada em camadas (controller, service, repository) e DTOs.</li>
+              <li data-i18n="p2.li2">Cadastro de usuários com Spring Security e persistência com Spring Data JPA.</li>
+            </ul>
+            <ul class="tags">
+              <li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>JPA</li><li>Maven</li>
+            </ul>
+          </article>
+
+          <article class="card reveal" data-category="frontend">
+            <div class="card__head">
+              <span class="card__icon">🧶</span>
+              <div class="card__links">
+                <a href="https://github.com/TllFabri/hands-that-create" target="_blank" rel="noopener" class="card__link">GitHub ↗</a>
+                <a href="https://hands-that-create.vercel.app" target="_blank" rel="noopener" class="card__link">Demo ↗</a>
+              </div>
+            </div>
+            <h3>Mãos que Criam</h3>
+            <p class="card__sub" data-i18n="p3.sub">Catálogo de Produtos Artesanais</p>
+            <ul class="card__list">
+              <li data-i18n="p3.li1">Catálogo digital com cadastro, edição e visualização de produtos para divulgar o trabalho de artesãos locais.</li>
+            </ul>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+          </article>
+
+          <article class="card reveal" data-category="frontend">
+            <div class="card__head">
+              <span class="card__icon">☕</span>
+              <div class="card__links">
+                <a href="https://github.com/TllFabri/Oak-Steam-Cafe" target="_blank" rel="noopener" class="card__link">GitHub ↗</a>
+                <a href="https://oak-steam-cafe.vercel.app" target="_blank" rel="noopener" class="card__link">Demo ↗</a>
+              </div>
+            </div>
+            <h3>Oak Steam Cafe</h3>
+            <p class="card__sub" data-i18n="p4.sub">Site Institucional</p>
+            <ul class="card__list">
+              <li data-i18n="p4.li1">Site responsivo para um café artesanal com apresentação da marca, cardápio completo e localização.</li>
+            </ul>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="more reveal">
+          <span data-i18n="projects.more">Veja todos os meus repositórios em</span>
+          <a href="https://github.com/TllFabri" target="_blank" rel="noopener">github.com/TllFabri</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Experiência ===== -->
+    <section class="section" id="experiencia">
+      <div class="container">
+        <h2 class="section__title reveal"><span class="mono">03.</span> <b data-i18n="exp.title">Experiência</b></h2>
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <span class="timeline__date mono" data-i18n="exp0.date">projetos pontuais</span>
+            <h3><b data-i18n="exp0.role">Desenvolvedor Web Freelancer</b> · <span data-i18n="exp0.org">Empresas locais</span></h3>
+            <p data-i18n="exp0.desc">Projetos freelancer para empresas locais: desenvolvimento de sites responsivos, entendendo a necessidade
+              de cada cliente e entregando a solução publicada e pronta para uso.</p>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__date mono" data-i18n="exp1.date">jun/2026 – atual</span>
+            <h3><b data-i18n="exp1.role">Atendente de Telemarketing</b> · <span>Cercred</span></h3>
+            <p data-i18n="exp1.desc">Atendimento a clientes em empresa do setor de crédito, esclarecimento de dúvidas e registro estruturado
+              de solicitações em sistema, com foco em comunicação clara e resolução de problemas.</p>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__date mono" data-i18n="exp2.date">out/2025 – jun/2026</span>
+            <h3><b data-i18n="exp2.role">Auxiliar de Padeiro</b> · <span>Padaria Santo Antônio</span></h3>
+            <p data-i18n="exp2.desc">Apoio na produção, organização do ambiente e controle de ingredientes, desenvolvendo disciplina,
+              pontualidade e trabalho em equipe.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Competências ===== -->
+    <section class="section" id="competencias">
+      <div class="container">
+        <h2 class="section__title reveal"><span class="mono">04.</span> <b data-i18n="skills.title">Competências</b></h2>
+        <div class="skills">
+          <div class="skill-group reveal">
+            <h3 data-i18n="skills.lang">Linguagens</h3>
+            <ul class="tags"><li>Java</li><li>Python</li><li>JavaScript</li><li>SQL</li><li>C</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 data-i18n="skills.frameworks">Frameworks e bibliotecas</h3>
+            <ul class="tags"><li>Spring Boot</li><li>Spring Security</li><li>Spring Data JPA</li><li>FastAPI</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 data-i18n="skills.backend">Back-end e dados</h3>
+            <ul class="tags"><li>APIs REST</li><li>HTTP</li><li>PostgreSQL</li><li>MySQL</li><li>Maven</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 data-i18n="skills.fundamentals">Fundamentos</h3>
+            <ul class="tags">
+              <li data-i18n="skills.oop">POO</li>
+              <li data-i18n="skills.ds">Estruturas de Dados</li>
+              <li data-i18n="skills.logic">Lógica de Programação</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 data-i18n="skills.tools">Ferramentas</h3>
+            <ul class="tags"><li>Git</li><li>GitHub</li><li>VS Code</li><li>IntelliJ IDEA</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 data-i18n="skills.languages">Idiomas</h3>
+            <ul class="tags">
+              <li data-i18n="skills.pt">Português · nativo</li>
+              <li data-i18n="skills.en">Inglês · básico (documentação técnica)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Formação ===== -->
+    <section class="section" id="formacao">
+      <div class="container">
+        <h2 class="section__title reveal"><span class="mono">05.</span> <b data-i18n="edu.title">Formação e cursos</b></h2>
+        <div class="education">
+          <div class="edu-card reveal">
+            <span class="card__icon">🎓</span>
+            <div>
+              <h3 data-i18n="edu.course">Análise e Desenvolvimento de Sistemas</h3>
+              <p class="card__sub">Universidade Estácio de Sá</p>
+              <p data-i18n="edu.desc">Graduação em andamento (4º semestre) · Turno da noite · Conclusão prevista: dezembro/2027</p>
+            </div>
+          </div>
+          <ul class="courses reveal">
+            <li><strong>CS50: Introduction to Computer Science</strong><span>Harvard / edX</span></li>
+            <li><strong>Git e GitHub: Compartilhando e Colaborando em Projetos</strong><span>Alura · 8h</span></li>
+            <li><strong>Python: Crie seu Primeiro Aplicativo</strong><span>Alura · 8h</span></li>
+            <li><strong>Python: Aplicando Orientação a Objetos</strong><span>Alura · 6h</span></li>
+            <li><strong>Programação Lógica I e II com JavaScript</strong><span>Alura · 12h</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contato ===== -->
+    <section class="section contact" id="contato">
+      <div class="container">
+        <h2 class="section__title reveal"><span class="mono">06.</span> <b data-i18n="contact.title">Contato</b></h2>
+        <p class="contact__text reveal" data-i18n="contact.text">
+          Estou aberto a oportunidades de estágio em backend. Se quiser conversar, é só mandar uma mensagem!
+        </p>
+        <div class="contact__links reveal">
+          <button class="btn btn--primary" id="copyEmail" data-email="thiagobarrosfabri07@gmail.com">
+            ✉️ thiagobarrosfabri07@gmail.com
+          </button>
+          <a class="btn btn--outline" href="https://www.linkedin.com/in/tllfabri/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn--outline" href="https://github.com/TllFabri" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn--outline" href="Curriculo_ThiagoFabri.pdf" download data-i18n="contact.btnCv">📄 Currículo (PDF)</a>
+        </div>
+        <p class="toast" id="toast" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="mono">© <span id="year"></span> Thiago Fabri. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
+    <a href="#inicio" class="footer__top" aria-label="Voltar ao topo" data-i18n="footer.top">↑ topo</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
