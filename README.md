@@ -38,3 +38,12 @@ Basta abrir o `index.html` no navegador, ou usar a extensão Live Server do VS C
 - E-mail: thiagobarrosfabri07@gmail.com
 - LinkedIn: [linkedin.com/in/tllfabri](https://www.linkedin.com/in/tllfabri/)
 - GitHub: [github.com/TllFabri](https://github.com/TllFabri)
+
+---
+
+# Team
+
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/222240928?v=4" width="115"><br><sub>Thiago Fabri</sub>](https://github.com/TllFabri) |
+| :---: |
+
+
